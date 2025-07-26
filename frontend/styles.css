@@ -1,0 +1,122 @@
+/* Basic styling for the Tkinter GUI Builder */
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: #2b3990;
+  color: #fff;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+header button {
+  padding: 0.5rem 1rem;
+  background-color: #ffcb05;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 160px;
+  background-color: #f5f5f5;
+  border-right: 1px solid #ddd;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.sidebar h2 {
+  margin-top: 0;
+}
+
+.widget-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.widget-item {
+  padding: 0.5rem;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: grab;
+  text-align: center;
+}
+
+.widget-item:active {
+  cursor: grabbing;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  height: 100%;
+}
+
+.canvas {
+  flex: 2;
+  position: relative;
+  background-color: #fff;
+  border: 2px dashed #ccc;
+  margin: 1rem;
+  overflow: auto;
+}
+
+.inspector {
+  width: 240px;
+  border-left: 1px solid #ddd;
+  padding: 1rem;
+  box-sizing: border-box;
+  background-color: #fafafa;
+}
+
+.inspector h2 {
+  margin-top: 0;
+}
+
+.canvas .widget {
+  position: absolute;
+  border: 1px solid #007acc;
+  padding: 4px;
+  box-sizing: border-box;
+  background-color: #e0eaff;
+  cursor: move;
+  user-select: none;
+}
+
+.canvas .widget.selected {
+  border: 2px dashed #d42f79;
+}
+
+.inspector label {
+  display: block;
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+
+.inspector input {
+  width: 100%;
+  padding: 0.25rem;
+  margin-top: 0.25rem;
+  box-sizing: border-box;
+}
